@@ -16,9 +16,7 @@ function firstNonRepeatedChar(str) {
          {
             if(count==1)
             {
-                console.log(prev);
-                present=true;
-                break;
+                return prev;
             }
             else
             {
@@ -28,7 +26,7 @@ function firstNonRepeatedChar(str) {
          }
        }
        if(present==false)
-       console.log("null");
+        return null;
    }
    const input = prompt("Enter a string");
    alert(firstNonRepeatedChar(input)); 
