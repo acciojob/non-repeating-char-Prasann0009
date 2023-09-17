@@ -3,6 +3,7 @@ function firstNonRepeatedChar(str) {
     let count=1;
      let str1=str;
      let present=false;
+     let ans;
      for(let i=0;i<=str1.length;i++)
      {
         if(str1.charAt(i)!="0")
@@ -20,18 +21,24 @@ function firstNonRepeatedChar(str) {
        if(count==1)
          {
             present=true;
-            return curr;
+            ans=curr;
          }
        else
        {
         count=1;
        }
     }
+    if(i=str1.length-1 && present==true)
+    {
+       return ans;
+    }
+    else if(i=str1.length-1)
+    {
+       return null;
+    }
      }
-     if(present==false)
-     {
-        return "null";
-     }
+    
+
    }
    const input = prompt("Enter a string");
    alert(firstNonRepeatedChar(input)); 
